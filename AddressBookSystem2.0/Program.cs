@@ -6,7 +6,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("...Welcome to Address Book...");
-            AddressBook Book = new AddressBook();
+            AddressBooks Book = new AddressBooks();
             bool flag = true;
             while (flag)
             {
@@ -35,3 +35,4 @@
         }
     }
 }
+
