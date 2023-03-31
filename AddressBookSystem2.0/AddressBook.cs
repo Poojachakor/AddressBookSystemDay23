@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AddressBookSystem2._0
 {
-    internal class AddressBooks
+    class AddressBook
     {
         List<Contact> addressBookList = new List<Contact>();
 
@@ -15,42 +15,42 @@ namespace AddressBookSystem2._0
             Contact contacts = new Contact();
 
             Console.WriteLine("Enter First Name : ");
-            contacts.firstName = Console.ReadLine();
+            contacts.FirstName = Console.ReadLine();
             Console.WriteLine("Enter Last Name : ");
-            contacts.lastName = Console.ReadLine();
+            contacts.LastName = Console.ReadLine();
             Console.WriteLine("Enter Email : ");
-            contacts.email = Console.ReadLine();
+            contacts.Email = Console.ReadLine();
             Console.WriteLine("Enter Phone Number : ");
-            contacts.phoneNo = Console.ReadLine();
+            contacts.PhoneNo = Console.ReadLine();
             Console.WriteLine("Enter the Address : ");
-            contacts.address = Console.ReadLine();
+            contacts.Address = Console.ReadLine();
             Console.WriteLine("Enter State Name : ");
-            contacts.state = Console.ReadLine();
+            contacts.State = Console.ReadLine();
             Console.WriteLine("Enter the City Name : ");
-            contacts.city = Console.ReadLine();
+            contacts.City = Console.ReadLine();
             Console.WriteLine("Enter Zip Code : ");
-            contacts.zipCode = Console.ReadLine();
+            contacts.ZipCode = Console.ReadLine();
             Console.WriteLine("Contact created");
         }
         public void AddContact()
         {
             Contact addContact = new Contact();
             Console.WriteLine("Enter First Name : ");
-            addContact.firstName = Console.ReadLine();
+            addContact.FirstName = Console.ReadLine();
             Console.WriteLine("Enter Last Name : ");
-            addContact.lastName = Console.ReadLine();
+            addContact.LastName = Console.ReadLine();
             Console.WriteLine("Enter Email : ");
-            addContact.email = Console.ReadLine();
+            addContact.Email = Console.ReadLine();
             Console.WriteLine("Enter Phone Number : ");
-            addContact.phoneNo = Console.ReadLine();
+            addContact.PhoneNo = Console.ReadLine();
             Console.WriteLine("Enter the Address : ");
-            addContact.address = Console.ReadLine();
+            addContact.Address = Console.ReadLine();
             Console.WriteLine("Enter State Name : ");
-            addContact.state = Console.ReadLine();
+            addContact.State = Console.ReadLine();
             Console.WriteLine("Enter the City Name : ");
-            addContact.city = Console.ReadLine();
+            addContact.City = Console.ReadLine();
             Console.WriteLine("Enter Zip Code : ");
-            addContact.zipCode = Console.ReadLine();
+            addContact.ZipCode = Console.ReadLine();
             addressBookList.Add(addContact);
             Console.WriteLine("Contact Added Successfully!");
         }
@@ -60,7 +60,7 @@ namespace AddressBookSystem2._0
             string firstName = Console.ReadLine();
             foreach (Contact data in addressBookList)
             {
-                if (data.firstName == firstName)
+                if (data.FirstName == firstName)
                 {
                     Console.WriteLine("Edit Contact details");
                     Console.WriteLine("\n1.First Name \n2.Last Name \n3.Address \n4.city \n5.state \n6.zip Code \n7.Phone Number \n8.Email");
@@ -69,35 +69,35 @@ namespace AddressBookSystem2._0
                     {
                         case 1:
                             Console.WriteLine("Enter First Name : ");
-                            data.firstName = Console.ReadLine();
+                            data.FirstName = Console.ReadLine();
                             break;
                         case 2:
                             Console.WriteLine("Enter Last Name");
-                            data.lastName = Console.ReadLine();
+                            data.LastName = Console.ReadLine();
                             break;
                         case 3:
                             Console.WriteLine("Enter Address");
-                            data.address = Console.ReadLine();
+                            data.Address = Console.ReadLine();
                             break;
                         case 4:
                             Console.WriteLine("Enter City");
-                            data.city = Console.ReadLine();
+                            data.City = Console.ReadLine();
                             break;
                         case 5:
                             Console.WriteLine("Enter State");
-                            data.state = Console.ReadLine();
+                            data.State = Console.ReadLine();
                             break;
                         case 6:
                             Console.WriteLine("Enter Zip Code");
-                            data.zipCode = Console.ReadLine();
+                            data.ZipCode = Console.ReadLine();
                             break;
                         case 7:
                             Console.WriteLine("Enter Phone Number");
-                            data.phoneNo = Console.ReadLine();
+                            data.PhoneNo = Console.ReadLine();
                             break;
                         case 8:
                             Console.WriteLine("Enter Email");
-                            data.email = Console.ReadLine();
+                            data.Email = Console.ReadLine();
                             break;
                         default:
                             Console.WriteLine("Select Correct number");
@@ -133,7 +133,7 @@ namespace AddressBookSystem2._0
             string firstName = Console.ReadLine();
             foreach (Contact data in addressBookList)
             {
-                if (data.firstName == firstName)
+                if (data.FirstName == firstName)
                 {
                     addressBookList.Remove(data);
                     Console.WriteLine("Contact delete Scccessfully");
@@ -150,17 +150,15 @@ namespace AddressBookSystem2._0
             Console.WriteLine("Contact Details");
             foreach (Contact display in addressBookList)
             {
-                Console.WriteLine(display.firstName);
-                Console.WriteLine(display.lastName);
-                Console.WriteLine(display.email);
-                Console.WriteLine(display.phoneNo);
-                Console.WriteLine(display.address);
-                Console.WriteLine(display.state);
-                Console.WriteLine(display.city);
-                Console.WriteLine(display.zipCode);
+                Console.WriteLine(display.FirstName);
+                Console.WriteLine(display.LastName);
+                Console.WriteLine(display.Email);
+                Console.WriteLine(display.PhoneNo);
+                Console.WriteLine(display.Address);
+                Console.WriteLine(display.State);
+                Console.WriteLine(display.City);
+                Console.WriteLine(display.ZipCode);
             }
         }
     }
 }
-
-
